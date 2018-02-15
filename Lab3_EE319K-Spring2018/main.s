@@ -150,8 +150,8 @@ delaydelay1
 	 BNE	delaydelay1
 delay0next
 	 LDR	R5, [R0]
-	 BIC	R5, #0xFFFFFFFD
-	 SUBS	R5, #2
+	 AND	R5, #0x2
+	 CMP	R5, #2
 	 BEQ	delay0next1
 	 B		delay0next
 delay0next1

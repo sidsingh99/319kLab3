@@ -252,8 +252,8 @@ ARM Macro Assembler    Page 4
   150 000000C0 D1FD            BNE              delaydelay1
   151 000000C2         delay0next
   152 000000C2 6805            LDR              R5, [R0]
-  153 000000C4 F005 0502       BIC              R5, #0xFFFFFFFD
-  154 000000C8 3D02            SUBS             R5, #2
+  153 000000C4 F005 0502       AND              R5, #0x2
+  154 000000C8 2D02            CMP              R5, #2
   155 000000CA D000            BEQ              delay0next1
   156 000000CC E7F9            B                delay0next
   157 000000CE         delay0next1
